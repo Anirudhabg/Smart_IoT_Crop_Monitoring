@@ -1,6 +1,7 @@
 # Smart IoT Crop Monitoring
+
 ## Overview
-This project focuses on efficient water resource management for crops using IoT technology. The system monitors soil moisture, pH levels, temperature, humidity, and rainfall to optimize water usage for irrigation.
+This project implements a smart system for efficient water management in crop fields using IoT technology. The system monitors essential environmental factors like soil moisture, pH levels, temperature, humidity, and rainfall to optimize irrigation practices.
 
 ## Components
 - **Soil Moisture Sensor**
@@ -8,25 +9,24 @@ This project focuses on efficient water resource management for crops using IoT 
 - **DHT11 Temperature and Humidity Sensor**
 - **Rain Sensor**
 - **NodeMCU ESP8266 Microcontroller**
-- **CJMCU-4051 74HC4051 8 Channel Analog Multiplexer/Demultiplexer Breakout Board**
+- **CJMCU-4051 74HC4051 8-Channel Analog Multiplexer/Demultiplexer**
 
 ## Circuit Diagram
-Give link to image
-
+[Click here to view the circuit diagram](https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring/tree/dc198cc2c87d2e10e7843a34db3a78249e929be1/Images/circuit.png)
 
 ## Connections
 
 ### NodeMCU ESP8266 to CJMCU-4051 74HC4051
-| CJMCU-4051 Pin      | NodeMCU ESP8266 Pin |
-|---------------------|---------------------|
-| VEE                 | GND                 |
-| VCC                 | 3v3                 |
-| GD                  | GND                 |
-| Z                   | A0                  |
-| S0                  | D1                  |
-| S1                  | D2                  |
-| S2                  | D5                  |
-| E                   | GND                 |
+| CJMCU-4051 Pin | NodeMCU ESP8266 Pin |
+|----------------|---------------------|
+| VEE            | GND                 |
+| VCC            | 3v3                 |
+| GD             | GND                 |
+| Z              | A0                  |
+| S0             | D1                  |
+| S1             | D2                  |
+| S2             | D5                  |
+| E              | GND                 |
 
 ### Sensors to CJMCU-4051 74HC4051
 | Sensor       | CJMCU-4051 Pin |
@@ -45,48 +45,43 @@ Give link to image
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/Anirudhabg/Optimizing-Water-Management-IoT-Crop-Monitoring-System-.git
+git clone https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring.git
 ```
 
-### Step 2: Get the Analog Values for Different Solutions
-1. Make connections as shown in Image (Image Reference).
-2. Get the analog values of pH for different solutions such as 4.0, 7.0, and 10.0 by using `pH.ino` code.
-3. Make sure the input voltage remains the same.
+### Step 2: Obtain Analog Values for pH Solutions
+1. Set up the hardware as depicted in the circuit diagram.
+2. Use the `pH.ino` code to record analog values for pH solutions (e.g., 4.0, 7.0, 10.0).
+3. Maintain a consistent input voltage during readings.
 
-### Step 3: Calculate Calibration Slope and Intercept for pH Sensor
-1. Open `app.py` in your preferred IDE.
-2. Run the code to calculate the calibration slope and intercept.
-3. Note down the slope and intercept values.
+### Step 3: Calculate pH Sensor Calibration
+1. Open `app.py` in your preferred code editor.
+2. Run the script to determine the calibration slope and intercept.
+3. Record these calibration parameters for later use.
 
 ### Step 4: Upload Code to NodeMCU
-1. Open `main.ino` in Arduino IDE.
-2. Enter the calculated slope and intercept values in the code.
-3. Replace the Blynk template name, template ID, and auth token with your Blynk credentials.
-4. Update the event names to match those in the Blynk application.
-5. Set your Wi-Fi SSID and password in the code.
+1. Open `main.ino` in the Arduino IDE.
+2. Insert the slope and intercept values from the calibration process.
+3. Update the Blynk template name, template ID, and auth token with your credentials.
+4. Ensure event names in the code correspond with those in the Blynk app.
+5. Enter your Wi-Fi SSID and password.
 
-### Step 5: Upload the Code
-1. Connect your NodeMCU ESP8266 to your computer.
-2. Select the correct board and port in Arduino IDE.
+### Step 5: Upload the Code to NodeMCU
+1. Connect the NodeMCU ESP8266 to your computer.
+2. Choose the correct board and port in the Arduino IDE.
 3. Upload the code.
 
-## Note
-- Ensure the Blynk template name, template ID, and auth token are correctly set in the code.
-- Verify that the event names in the code match those specified in the Blynk application.
-
 ## Usage
-1. Power up the NodeMCU ESP8266.
-2. Open the Blynk application on your mobile device.
-3. Monitor real-time data for soil moisture, pH levels, temperature, humidity, and rainfall.
-4. The system will automatically manage the water pump based on the sensor data to optimize irrigation.
+1. Power the NodeMCU ESP8266.
+2. Open the Blynk app on your smartphone.
+3. Monitor real-time data for soil moisture, pH, temperature, humidity, and rainfall.
 
 ## Troubleshooting
-- **Sensor Readings Not Appearing:** Check connections and ensure all components are powered.
-- **Wi-Fi Connection Issues:** Verify SSID and password are correct and that the NodeMCU is within range of the Wi-Fi network.
-- **Blynk App Not Updating:** Ensure the template ID, auth token, and event names are correctly set in the code.
+- **No Sensor Readings:** Check all connections and ensure components are receiving power.
+- **Wi-Fi Issues:** Verify the SSID and password and ensure the NodeMCU is within Wi-Fi range.
+- **Blynk App Not Syncing:** Confirm that the Blynk credentials and event names are correctly set.
 
 ## Contributing
-Feel free to fork this repository and submit pull requests. For major changes, please open an issue to discuss what you would like to change.
+Contributions are welcome! Please fork this repository and submit a pull request. For significant changes, open an issue to discuss proposed modifications.
 
 ## License
 This project is licensed under the MIT License.
