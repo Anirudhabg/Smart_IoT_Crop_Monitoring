@@ -49,7 +49,7 @@ git clone https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring.git
 ```
 
 ### Step 2: Obtain Analog Values for pH Solutions
-1. Set up the hardware as depicted in the circuit diagram.
+1. [Set up the hardware as depicted in the circuit diagram](https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring/tree/c62380ac57ef86c033b43a8bf1f353dda34660ca/Images/pHcircuit.png).
 2. Use the `pH.ino` code to record analog values for pH solutions (e.g., 4.0, 7.0, 10.0).
 3. Maintain a consistent input voltage during readings.
 
