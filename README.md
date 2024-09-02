@@ -83,4 +83,4 @@ git clone https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring.git
 Contributions are welcome! Please fork this repository and submit a pull request. For significant changes, open an issue to discuss proposed modifications.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://github.com/Anirudhabg/Smart_IoT_Crop_Monitoring/blob/af7c1fdde0a003fcfa6fec40743238909b5fefbd/LICENSE).
