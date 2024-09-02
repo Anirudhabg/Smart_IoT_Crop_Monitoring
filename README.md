@@ -39,7 +39,6 @@ This project implements a smart system for efficient water management in crop fi
 | Component   | NodeMCU ESP8266 Pin |
 |-------------|---------------------|
 | DHT11       | D6                  |
-| Relay       | D7                  |
 
 ## Setup Instructions
 
