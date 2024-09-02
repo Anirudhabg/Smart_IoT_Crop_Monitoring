@@ -17,7 +17,6 @@
 #define MUX_SIG A0 // Analog pin connected to SIG pin of 74HC4051
 
 // Define sensor pins
-#define WATER_PUMP_PIN 13 // Water Pump
 #define DHT_PIN 12        // DHT11 Sensor
 
 // WiFi credentials
@@ -55,9 +54,6 @@ void setup()
     pinMode(MUX_S0, OUTPUT);
     pinMode(MUX_S1, OUTPUT);
     pinMode(MUX_S2, OUTPUT);
-
-    pinMode(WATER_PUMP_PIN, OUTPUT);
-    digitalWrite(WATER_PUMP_PIN, HIGH); // Ensure water pump is off initially
 
     timer.setInterval(1000L, DHT11Sensor);
     timer.setInterval(1000L, MainFunction);
@@ -114,7 +110,6 @@ void MainFunction()
         {
             Blynk.logEvent("ph_acidic_alert", "Alert: Water pH is below 6. Possible acidity detected. Please consider changing the water.");
             Serial.println("Acidic Water Content!!!");
-
             return;
         }
         else if (pHSensorValue > pHThresholdHigh)
